@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- ======================== CABEÇALHO ======================== -->
+    <header class="header">
+        <nav class="nav container flex">
+            <img src="img/logo.png" class="nav__logo">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list flex">
+                    <li class="nav__item"><a href="#" class="nav__link">home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">features</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">services</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">testimonials</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">meet us</a></li>
+                </ul>
+                <img src="img/close.png" class="nav__close" id="nav-close"/>
+            </div>
+            <div class="nav__toogle" id="nav-toogle">
+                <img src="img/menu.png"/>
+            </div>
+        </nav>
+        <div class="header__banner">
+            <div class="header__text container">
+                <h1 class="header__title">hair studio</h1>
+                <p class="header__text">
+                    Style your hair is style your life
+                </p>
+                <div class="header__buttons flex">
+                    <a href="#" class="btn btn--sm btn--white-ani"><span></span>find out</a>
+                    <a href="#" class="btn btn--sm btn--white-ani"><span></span>read more</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- ======================== FEATURES ======================== -->
+        <section class="features section">
+            <div class="section__header container">
+                <h2 class="section__title">features</h2>
+                <h3 class="section__subtitle">Why choose us</h3>
+            </div>
+            <div class="feature__content container flex">
+                <div class="feature__topics">
+                    <div class="feature__box">
+                        <h3 class="feature__title">exprienced staff</h3>
+                        <div class="feature__descr flex">
+                            <i class="fas fa-shield-alt feature__icon"></i>
+                            <p class="feature__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit pariatur asperiores vero nemo praesentium voluptatum?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature__box">
+                        <h3 class="feature__title">exprienced staff</h3>
+                        <div class="feature__descr flex">
+                            <i class="fas fa-shield-alt feature__icon"></i>
+                            <p class="feature__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit pariatur asperiores vero nemo praesentium voluptatum?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature__box">
+                        <h3 class="feature__title">exprienced staff</h3>
+                        <div class="feature__descr flex">
+                            <i class="fas fa-shield-alt feature__icon"></i>
+                            <p class="feature__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit pariatur asperiores vero nemo praesentium voluptatum?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature__image">
+                    <img src="img/barber-man.jpg"/>
+                </div>
+            </div>
+        </section>
+        <!-- ======================== SERVICES ======================== -->
+        <section class="services section">
+            <div class="section__header container">
+                <h2 class="section__title">services</h2>
+                <h3 class="section__subtitle">We provide better</h3>
+            </div>
+            <div class="service__content container">
+                <div class="service__image">
+                    <img src="img/pic-1.jpg"/>
+                    <div class="overlay"></div>
+                    <div class="service__descr">
+                        <h3 class="service__title">Hair Styling</h3>
+                        <div class="line"></div>
+                        <p class="service__text">
+                            This is test under description or barber foundation this is test under description of barber foundation
+                        </p>
+                    </div>
+                </div>
+                <div class="service__image">
+                    <img src="img/pic-2.jpg"/>
+                    <div class="overlay"></div>
+                    <div class="service__descr">
+                        <h3 class="service__title">Hair Styling</h3>
+                        <div class="line"></div>
+                        <p class="service__text">
+                            This is test under description or barber foundation this is test under description of barber foundation
+                        </p>
+                    </div>
+                </div>
+                <div class="service__image">
+                    <img src="img/pic-3.jpg"/>
+                    <div class="overlay"></div>
+                    <div class="service__descr">
+                        <h3 class="service__title">Hair Styling</h3>
+                        <div class="line"></div>
+                        <p class="service__text">
+                            This is test under description or barber foundation this is test under description of barber foundation
+                        </p>
+                    </div>
+                </div>
+                <div class="service__image">
+                    <img src="img/pic-4.jpg"/>
+                    <div class="overlay"></div>
+                    <div class="service__descr">
+                        <h3 class="service__title">Hair Styling</h3>
+                        <div class="line"></div>
+                        <p class="service__text">
+                            This is test under description or barber foundation this is test under description of barber foundation
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+    </main>
+
+    <script>
+        const navMenu = document.getElementById('nav-menu');
+        const navToggle = document.getElementById('nav-toogle')
+        const navClose = document.getElementById('nav-close')
+
+        if(navToggle){
+            navToggle.addEventListener('click', () =>{
+                navMenu.classList.add('show-menu')
+            })
+        }
+
+        if(navClose){
+            navClose.addEventListener('click', () =>{
+                navMenu.classList.remove('show-menu')
+            })
+        }
+
+    </script>
+    
+</body>
+</html>

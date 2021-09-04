@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* VARIAVEIS */
+:root{
+    /* COLOR */
+    --dark: #131313;
+    --pure: #fff;
+    --dark-transparent: rgba(0, 0, 0, 0.5);
+    --green: #009688;
+
+    /* FONTS */
+    --font-title: Kaushan Script;
+    --font-primary: Poppins;
+
+}
+
+/* RESET CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GERAL */
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--font-primary);
+    color: var(--dark);
+}
+
+h1{
+    font-family: var(--font-title);
+    font-size: 13.0rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+.container{
+    max-width: 990px;
+    margin: auto;
+    padding: 0 3.0rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* TOPO MENU */
+.header{
+    height: 100vh;
+    background: linear-gradient(var(--dark-transparent),var(--green)), url("../img/banner.jpg");
+    background-size: cover;    
+    background-position: center;
+    color: var(--pure);
+}
+
+.header-navbar{
+    width: 100%;
+    height: 120px;
+}
+
+.header-nav li{
+    font-size: 1.6rem;
+    padding-left: 2.5rem;
+    text-transform: uppercase;
+}
+
+.header-nav a{
+    color: var(--pure); 
+    position: relative;
+}
+
+.header-nav a::after{
+    content: '';
+    position: absolute;
+    background: #009688;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.header-nav a:hover::after{
+    width: 100%;
+}
+
+.header-toogle{
+    display: none;
+}
+
+.header-toogle img{
+    transform: scale(0.1);
+}
+
+/* BANNER TOPO COM TEXTOS */
+.banner-text{
+    text-align: center;
+    padding-top: 18.0rem;
+}
+
+.banner-text p{
+    font-size: 2.0rem;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.banner-buttons{
+    margin-top: 50px;
+}
+
+.banner-buttons a{
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 300;
+    padding: 12px 35px;
+    margin: 0 10px;
+    border: .5px solid #fff;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+.banner-buttons a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.banner-buttons a:hover span{
+    width: 100%;
+}
+
+.banner-buttons a:hover{
+    color: var(--dark);
+}
+
+/* INICIANDO AS FEATURES */
+.features{
+    width: 100%;
+    padding: 65px 0;
+}
+
+.title-section{
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.title-section h2{
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+.title-section h3{
+    font-size: 5.0rem;
+}
+
+.feature-box .title-feature h4{
+    font-size: 2.0rem;
+    color: var(--green);
+    text-transform: capitalize;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+.feature-descr.flex{
+    /* align-items: center; */
+    margin-bottom: 30px;
+}
+
+.feature-box .icon-feature{
+    font-size: 25px;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    padding: 3px 10px;
+    display: inline-block;
+    color: var(--green);
+    margin-right: 15px;
+}
+
+.feature-box .icon-feature i{
+    vertical-align: middle;
+}
+
+.feature-box .feature-descr p{
+    font-size: 1.4rem;
+}
+
+.feature-image{
+    text-align: right;
+}
+
+.feature-image img{
+    width: 80%;
+    border-radius: 10px;
+}
